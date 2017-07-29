@@ -1,0 +1,31 @@
+1) Create zNode: 
+
+create /teste teste
+
+2) Criando três nodos /teste: 
+
+create -s /teste/filho1 /f1
+create -s /teste/filho2 /f2
+create -s /teste/filho3 /f3
+
+3) Criando teste2 zNode: 
+
+create /teste2 teste2
+
+4)  Efêmero zNode: 
+
+create -e /teste3 teste3
+
+5) Conectando clientes: 
+
+entrar na pasta /zookeeper-3.4.10 e digitar ./bin/zkCli.sh -server 127.0.0.1:2181
+
+6) Watch no zNode /teste2: 
+
+get /teste2 true ou get /teste2 1
+
+7) Alteração em /teste2:
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:NodeDataChanged path:/teste2
